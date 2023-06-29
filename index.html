@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JavaScript DOM Manipulation</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header id="main">
+        <h1>JavaScript DOM Manipulation</h1>
+    </header>
+    <main>
+        <section id="texts">
+            <article>
+                <header>
+                    <input type="radio" name="radText" id="radText1" checked><label for="radText1">Text 1</label>
+                </header>
+                <p id="text1">
+                    JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.
+                </p>
+            </article>
+            <article>
+                <header>
+                    <input type="radio" name="radText" id="radText2"><label for="radText2">Text 2</label>
+                </header>
+                <p id="text2">
+                    The standards for JavaScript are the ECMAScript Language Specification (ECMA-262) and the ECMAScript Internationalization API specification (ECMA-402). The JavaScript documentation throughout MDN is based on the latest draft versions of ECMA-262 and ECMA-402. And in cases where some proposals for new ECMAScript features have already been implemented in browsers, documentation and examples in MDN articles may use some of those new features.
+                </p>
+            </article>
+            <article>
+                <header>
+                    <input type="radio" name="radText" id="radText3"><label for="radText3">Text 3</label>
+                </header>
+                <p id="text3">
+                    Do not confuse JavaScript with the Java programming language. Both "Java" and "JavaScript" are trademarks or registered trademarks of Oracle in the U.S. and other countries. However, the two programming languages have very different syntax, semantics, and use.
+                </p>
+            </article>
+        </section>
+        <form>
+            <div>
+                <label for="cmbColours">Background colour:</label>
+                <select id="cmbColours">
+                    <option value="lightgrey">Grey</option>
+                    <option value="red">Red</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                    <option value="brown">Brown</option>
+                    <option value="violet">Violet</option>
+                    <option value="orange">Orange</option>
+                    <option value="white">White</option>
+                </select>
+            </div>
+            <div>
+                <button id="btnMove">Move selected text</button>
+            </div>
+        </form>
+        <section id="results">
+        </section>
+    </main>
+    <footer>
+        <p>
+            &copy; 2022 Arturo Mora-Rioja
+        </p>
+    </footer>
+</body>
+</html>
