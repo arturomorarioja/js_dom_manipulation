@@ -15,7 +15,11 @@ document.querySelector('#btnMove').addEventListener('click', (e) => {
  */
 document.querySelector('#cmbColours').addEventListener('change', () => {
 
-    const newColour = document.querySelectorAll('option')[document.querySelector('#cmbColours').selectedIndex].value;
+    // Approach #1 (cumbersome and inefficient)    
+    // const newColour = document.querySelectorAll('option')[document.querySelector('#cmbColours').selectedIndex].value;
+
+    // Approach #2. As it is a comboBox, not a listBox, there is only one selected option
+    const newColour = document.querySelector('#cmbColours').selectedOptions[0].value;
 
     document.querySelector('#results').style.backgroundColor = newColour;
 });
@@ -27,7 +31,7 @@ document.querySelector('#cmbColours').addEventListener('change', () => {
 // Approach #1
 
 // document.querySelectorAll('section#texts > article > p').forEach((paragraph) => {
-//     paragraph.addEventListener('click', function() {
+//     paragraph.addEventListener('click', () => {
 //         const paragraphId = paragraph.id;
 //         document.querySelector('#radText' + paragraphId.substring(paragraphId.length - 1)).click();
 //     });
