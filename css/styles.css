@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap");
-
 :root {
     --colorTextPrimary: black;
     --colorTextSecondary: floralwhite;
@@ -13,6 +12,8 @@
 
 * {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -34,35 +35,31 @@ section#texts {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 1rem;
-}
-section#texts > article {
-    border: thin solid var(--colorTextPrimary);
-    padding: 1rem;
-    flex: 1 1 700px;
-}
-section#texts > article:first-of-type {
-    border-radius: 0.5rem 0.5rem 0 0;
-}
-section#texts > article:last-of-type {
-    border-radius: 0 0 0.5rem 0.5rem;
-}
-section#texts > article > p {
-    cursor: pointer;
-}
-@media (min-width: 500px) {
-    section#texts > article {
-        flex: 1 1 450px;
+    > article {
+        border: thin solid var(--colorTextPrimary);
+        padding: 1rem;
+        flex: 1 1 700px;
+        @media (min-width: 500px) {
+            flex: 1 1 450px;
+        }
+        @media (min-width: 750px) {
+            flex: 1 1 0;
+        }
     }
-}
-@media (min-width: 750px) {
-    section#texts > article {
-        flex: 1 1 0;
+    > article:first-of-type {
+        border-radius: 0.5rem 0.5rem 0 0;
+        @media (min-width: 750px) {
+            border-radius: 0.5rem 0 0 0.5rem;
+        }
     }
-    section#texts > article:first-of-type {
-        border-radius: 0.5rem 0 0 0.5rem;
+    > article:last-of-type {
+        border-radius: 0 0 0.5rem 0.5rem;
+        @media (min-width: 750px) {
+            border-radius: 0 0.5rem 0.5rem 0;
+        }
     }
-    section#texts > article:last-of-type {
-        border-radius: 0 0.5rem 0.5rem 0;
+    > article > p {
+        cursor: pointer;
     }
 }
 
@@ -73,30 +70,33 @@ section#results {
     background-color: var(--colorSecondary);    
 }
 
-form > * {
-    text-align: center;
-    margin-bottom: 1rem;
-}
-@media (min-width: 600px) {
-    form {
+form {
+    @media (min-width: 600px) {
         display: flex;
         justify-content: space-between;
         margin: 0 2rem;
     }
+    > * {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    button, select {
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        font-family: var(--fontMain);
+        font-size: 1.1rem;
+    }
 }
-
 label {
     font-weight: bold;
-}
-label:before {
-    content: " ";
+    &::before {
+        content: " ";
+    }
 }
 
-button, select {
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-    font-family: var(--fontMain);
-    font-size: 1.1rem;
+a {
+    text-decoration: none;
+    color: var(--colorTextPrimary);
 }
 
 footer {
